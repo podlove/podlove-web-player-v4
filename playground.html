@@ -98,14 +98,14 @@
                             onChange: updatePlayer,
                             mode: 'code'
                         };
-                        
+
                         var editor = new JSONEditor(document.getElementById('editor'), options);
                         editor.set(config);
 
 
                         function updatePlayer() {
                             store.dispatch({
-                                type: 'INIT', 
+                                type: 'INIT',
                                 payload: editor.get()
                             })
                         }
