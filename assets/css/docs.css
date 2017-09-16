@@ -1,6 +1,7 @@
 /**
 * VARIABLES
 */
+@import url(normalize.css);
 /*!
  * Milligram v1.3.0
  * https://milligram.github.io
@@ -632,10 +633,11 @@ html, body {
   height: 100%;
   max-height: 100%;
   overflow: hidden;
-  min-width: 360px; }
-
-* {
+  min-width: 320px;
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 pre {
   margin-bottom: 2em !important; }
@@ -646,6 +648,10 @@ a {
   a:hover {
     color: #008cff;
     text-decoration: none; }
+
+h1, h2, h3, h4, p {
+  margin-left: 0;
+  margin-right: 0; }
 
 .wrapper {
   height: 100%;
@@ -715,8 +721,7 @@ a {
   width: 100%;
   overflow-y: auto;
   color: #333;
-  line-height: 1.7;
-  word-wrap: break-word; }
+  line-height: 1.7; }
 
 .inner {
   width: 100%;
@@ -729,7 +734,7 @@ a {
 /**
 * Mobile
 */
-@media (max-width: 745px) {
+@media (max-width: 800px) {
   .wrapper {
     flex-direction: column; }
 
@@ -750,10 +755,11 @@ a {
         background: #fafafa; }
 
   .content {
-    width: 100%;
     margin-top: 0;
     height: calc(100% - 50px);
-    min-height: calc(100% - 50px); }
+    min-height: calc(100% - 50px);
+    max-width: 100%; }
 
   .inner {
-    padding: 1em; } }
+    max-width: 100%;
+    padding: 1em 2em; } }
