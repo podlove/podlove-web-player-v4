@@ -881,17 +881,15 @@ to {
 }
 
 .header {
-  padding: 1em 1em 0 1em;
+  padding: 0 1em;
   overflow: hidden;
-}
-.header:empty {
-    padding: 0;
 }
 
 .info {
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 1em;
 }
 .info .poster {
     margin: 0 1em 0 0;
@@ -956,6 +954,7 @@ to {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 1em;
   height: 100px;
   text-align: center;
   overflow: hidden;
