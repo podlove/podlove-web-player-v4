@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Player Persistence</title>
+  <title>Installation</title>
   <meta name="description" content="The fast, flexible and responsive podcast player powered by podlove meta data.">
 
 	<link rel="icon" href="/podlove-web-player/assets/images/favicon.ico">
-  <link rel="canonical" href="/podlove-web-player/persistence.html">
+  <link rel="canonical" href="/podlove-web-player/installation.html">
 
 	<link rel="stylesheet" href="/podlove-web-player/assets/css/docs.css">
 
@@ -95,7 +95,7 @@
       "live-html": {
         "title": "Live",
         "category": "",
-        "content": "Live ModeConfig{  mode: 'live',  title: 'Livestream',  subtitle: 'Wir sind ein CreativeCommons-Webradio, das sich zur Aufgabe gemacht hat freie Musik zu verbreiten und die Hörer durch die vielen Beteiligungsmöglichkeiten direkt zu einem Teil unserer Sendungen zu machen.',  link: 'https://theradio.cc',  poster: 'https://theradio.cc/wp-content/uploads/2014/01/9e7d1d68285200b9d3c0-150x150.jpg',  show: {    title: 'TheRadio.cc',    link: 'https://theradio.cc'  },  audio: [{      url: 'http://mp3.theradio.cc/',      mimeType: 'audio/mp3'  }, {      url: 'http://ogg.theradio.cc/',      mimeType: 'audio/ogg'  }]}",
+        "content": "# Live Mode## Config```javascript{  mode: 'live',  title: 'Livestream',  subtitle: 'Wir sind ein CreativeCommons-Webradio, das sich zur Aufgabe gemacht hat freie Musik zu verbreiten und die Hörer durch die vielen Beteiligungsmöglichkeiten direkt zu einem Teil unserer Sendungen zu machen.',  link: 'https://theradio.cc',  poster: 'https://theradio.cc/wp-content/uploads/2014/01/9e7d1d68285200b9d3c0-150x150.jpg',  show: {    title: 'TheRadio.cc',    link: 'https://theradio.cc'  },  audio: [{      url: 'http://mp3.theradio.cc/',      mimeType: 'audio/mp3'  }, {      url: 'http://ogg.theradio.cc/',      mimeType: 'audio/ogg'  }]}```",
         "url": "/live.html",
 				"href": "podlove-web-player//live.html"
       }
@@ -104,7 +104,7 @@
       "persistence-html": {
         "title": "Player Persistence",
         "category": "",
-        "content": "PersistenceLocal StorageInformation like the current playtime is persisted in the browser local storage per episode.Episodes meta objects are hashed to create a episode specific hash code:{   \"pwp\": {      \"133677995\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": true        }      },      \"3804781328\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": false        }      },      \"-5005988967\": {        \"playtime\": 236.400308,        \"quantiles\": [          [            0.445033,            3.945098          ],          [            230.396353,            236.400308          ]        ]      }   }}UrlThe player configuration can be set via url parameters.This feature is used for deep linking, but can also be used to set custom meta information, like the title:  Custom Playtime: /podlove-web-player/persistence?t=01:33:07",
+        "content": "# Persistence## Local StorageInformation like the current playtime is persisted in the browser local storage per episode.Episodes meta objects are hashed to create a episode specific hash code:```javascript{   \"pwp\": {      \"133677995\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": true        }      },      \"3804781328\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": false        }      },      \"-5005988967\": {        \"playtime\": 236.400308,        \"quantiles\": [          [            0.445033,            3.945098          ],          [            230.396353,            236.400308          ]        ]      }   }}```## UrlThe player configuration can be set via url parameters.This feature is used for deep linking, but can also be used to set custom meta information, like the title:- Custom Playtime: [{{ \"persistence?t=01:33:07\" | relative_url }}]({{ \"persistence?t=01:33:07\" | relative_url }})",
         "url": "/persistence.html",
 				"href": "podlove-web-player//persistence.html"
       }
@@ -150,7 +150,7 @@
 </script>
 
 	<div class="sidebar-main">
-		<ul class="navigation" id="navigation">													<li>				<a class="" href="/podlove-web-player/">					Overview				</a>			</li>								<li>				<a class="" href="/podlove-web-player/installation.html">					Installation				</a>			</li>								<li>				<a class="" href="/podlove-web-player/embedding.html">					Embedding				</a>			</li>								<li>				<a class="" href="/podlove-web-player/theme.html">					Theming				</a>			</li>								<li>				<a class="" href="/podlove-web-player/config.html">					Config				</a>			</li>								<li>				<a class="active" href="/podlove-web-player/persistence.html">					Player Persistence				</a>			</li>								<li>				<a class="" href="/podlove-web-player/advanced.html">					Advanced Usage				</a>			</li>								<li>				<a class="" href="/podlove-web-player/live.html">					Live				</a>			</li>								<li>				<a class="" href="/podlove-web-player/playground.html">					Playground				</a>			</li>								<li>				<a class="" href="/podlove-web-player/transcripts.html">					Transcripts				</a>			</li>								<li>				<a class="" href="/podlove-web-player/error.html">					Error Handling				</a>			</li>			</ul>
+		<ul class="navigation" id="navigation">													<li>				<a class="" href="/podlove-web-player/">					Overview				</a>			</li>								<li>				<a class="active" href="/podlove-web-player/installation.html">					Installation				</a>			</li>								<li>				<a class="" href="/podlove-web-player/embedding.html">					Embedding				</a>			</li>								<li>				<a class="" href="/podlove-web-player/theme.html">					Theming				</a>			</li>								<li>				<a class="" href="/podlove-web-player/config.html">					Config				</a>			</li>								<li>				<a class="" href="/podlove-web-player/persistence.html">					Player Persistence				</a>			</li>								<li>				<a class="" href="/podlove-web-player/advanced.html">					Advanced Usage				</a>			</li>								<li>				<a class="" href="/podlove-web-player/live.html">					Live				</a>			</li>								<li>				<a class="" href="/podlove-web-player/playground.html">					Playground				</a>			</li>								<li>				<a class="" href="/podlove-web-player/transcripts.html">					Transcripts				</a>			</li>								<li>				<a class="" href="/podlove-web-player/error.html">					Error Handling				</a>			</li>			</ul>
 
 		<ul id="search-results" class="navigation"></ul>
 
@@ -159,60 +159,41 @@
 
 			<main class="content">
 				<div class="inner">
-					<h1 id="persistence">Persistence</h1>
+					<h1 id="installation">Installation</h1>
 
-<p id="example"></p>
-<script src="/podlove-web-player/embed.js"></script>
+<p>Podlove Webplayer can be integrated in different ways. We provide the always latest version via CDN or all versions as an npm package.</p>
 
-<script>
-    podlovePlayer('#example', './fixtures/example.json');
-</script>
+<h2 id="cdn">CDN</h2>
 
-<h2 id="local-storage">Local Storage</h2>
+<p>The easiest way to integrate the player is to simply integrate this script in your page:</p>
 
-<p>Information like the current playtime is persisted in the browser local storage per episode.
-Episodes meta objects are hashed to create a episode specific hash code:</p>
-
-<pre><code class="language-javascript">{
-   "pwp": {
-      "133677995": {
-        "tabs": {
-          "chapters": false,
-          "settings": false,
-          "share": true
-        }
-      },
-      "3804781328": {
-        "tabs": {
-          "chapters": false,
-          "settings": false,
-          "share": false
-        }
-      },
-      "-5005988967": {
-        "playtime": 236.400308,
-        "quantiles": [
-          [
-            0.445033,
-            3.945098
-          ],
-          [
-            230.396353,
-            236.400308
-          ]
-        ]
-      }
-   }
-}
+<p>For https context:</p>
+<pre><code class="language-html">&lt;script src="https://cdn.podlove.org/web-player/embed.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<h2 id="url">Url</h2>
-<p>The player configuration can be set via url parameters.
-This feature is used for deep linking, but can also be used to set custom meta information, like the title:</p>
+<p>For http context:</p>
+<pre><code class="language-html">&lt;script src="http://cdn.podlove.org/web-player/embed.js"&gt;&lt;/script&gt;
+</code></pre>
 
-<ul>
-  <li>Custom Playtime: <a href="/podlove-web-player/persistence?t=01:33:07">/podlove-web-player/persistence?t=01:33:07</a></li>
-</ul>
+<p>Afterwards <code>podlovePlayer</code> should be available on the window object:</p>
+
+<pre><code class="language-html">&lt;script&gt;
+  podlovePlayer('#example', '/path/to/podcast/definition/or/object');
+&lt;/script&gt;
+</code></pre>
+
+<p>Please be aware to <strong>not</strong> set <code>reference.base</code> because this will break the binding to the cdn.</p>
+
+<h2 id="npm">NPM</h2>
+
+<p>If you want to serve a special player version you can find the player as the npm package <a href="https://www.npmjs.com/package/@podlove/podlove-web-player">@podlove/podlove-web-player</a>.</p>
+
+<p>To integrate the player you first have to install tha package:</p>
+
+<pre><code class="language-javascript">npm install @podlove/podlove-web-player --save
+</code></pre>
+
+<p>Afterwards move the player assets to a public folder of some webserver. By default the player will try to load further chunks from the webserver base. If the player files are located in a subpath you have to adapt the <code>reference.base</code> accordingly (see <a href="/podlove-web-player/config.html">config</a>)</p>
 
 
 				</div>
