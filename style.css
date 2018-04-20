@@ -1978,7 +1978,7 @@ to {
   padding: 0;
 }
 @media screen and (max-width: 375px) {
-.transcripts.has-search-results .follow-button {
+.transcripts.has-search-results .transcripts-follow-button {
     display: none;
 }
 .transcripts.has-search-results .search-navigation {
