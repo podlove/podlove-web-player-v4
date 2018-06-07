@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="podlove-web-player//style.css">
 </head>
 <body>
     <PodlovePlayer></PodlovePlayer>
@@ -17,8 +17,9 @@
               "link": "https:\/\/freakshow.fm"
             },
             "reference": {
-              "share": "//podlove-player.surge.sh/share",
-              "config": "//podlove-player.surge.sh/fixtures/fs207.json",
+              "base": "/podlove-web-player/",
+              "share": "/podlove-web-player//test",
+              "config": "/podlove-web-player//fixtures/fs207.json",
               "origin": "https://freakshow.fm/fs207-berliner-leistungswasser"
             },
             "theme": {
@@ -279,7 +280,8 @@
           }
     </script>
 
-    <script src="vendor.js"></script>
-    <script src="window.js"></script>
+    <script src="podlove-web-player//vendor.js"></script>
+    <script src="podlove-web-player//window.js"></script>
+    <script src="podlove-web-player//style.js"></script>
 </body>
 </html>
