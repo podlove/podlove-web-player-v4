@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Transcripts</title>
+  <title>Extensions</title>
   <meta name="description" content="The fast, flexible and responsive podcast player powered by podlove meta data.">
 
 	<link rel="icon" href="/podlove-web-player/assets/images/favicon.ico">
-  <link rel="canonical" href="/podlove-web-player/transcripts.html">
+  <link rel="canonical" href="/podlove-web-player/extensions.html">
 
 	<link rel="stylesheet" href="/podlove-web-player/assets/css/docs.css">
 
@@ -86,7 +86,7 @@
       "": {
         "title": "Overview",
         "category": "",
-        "content": "Podlove Web Player 4.0The fast, flexible and responsive podcast player powered by podlove meta data.Features  Standalone and Wordpress Plugin  Responsive  Theming  Sharing  State Persistance  Deep LinkingPrevious Versions  Podlove Web Player v3 Docs  Podlove Web Player v2 Docs",
+        "content": "# Podlove Web Player 4.0### The fast, flexible and responsive podcast player powered by podlove meta data.## Features- Standalone and Wordpress Plugin- Responsive- Theming- Sharing- State Persistance- Deep Linking## Previous Versions- [Podlove Web Player v3 Docs](docs.podlove.org/podlove-web-player-v3/)- [Podlove Web Player v2 Docs](docs.podlove.org/podlove-web-player-v3/versions/v2.html)",
         "url": "/",
 				"href": "podlove-web-player//"
       }
@@ -95,7 +95,7 @@
       "installation-html": {
         "title": "Installation",
         "category": "",
-        "content": "InstallationPodlove Webplayer can be integrated in different ways. We provide the always latest version via CDN or all versions as an npm package.CDNThe easiest way to integrate the player is to simply integrate this script in your page:For https context:&lt;script src=\"https://cdn.podlove.org/web-player/embed.js\"&gt;&lt;/script&gt;For http context:&lt;script src=\"http://cdn.podlove.org/web-player/embed.js\"&gt;&lt;/script&gt;Afterwards podlovePlayer should be available on the window object:&lt;script&gt;  podlovePlayer('#example', '/path/to/podcast/definition/or/object');&lt;/script&gt;Please be aware to not set reference.base because this will break the binding to the cdn.NPMIf you want to serve a special player version you can find the player as the npm package @podlove/podlove-web-player.To integrate the player you first have to install tha package:npm install @podlove/podlove-web-player --saveAfterwards move the player assets to a public folder of some webserver. By default the player will try to load further chunks from the webserver base. If the player files are located in a subpath you have to adapt the reference.base accordingly (see config)",
+        "content": "# InstallationPodlove Webplayer can be integrated in different ways. We provide the always latest version via CDN or all versions as an npm package.## CDNThe easiest way to integrate the player is to simply integrate this script in your page:For https context:```html```For http context:```html```Afterwards `podlovePlayer` should be available on the window object:```html```Please be aware to __not__ set `reference.base` because this will break the binding to the cdn.## NPMIf you want to serve a special player version you can find the player as the npm package [@podlove/podlove-web-player](https://www.npmjs.com/package/@podlove/podlove-web-player).To integrate the player you first have to install tha package:```javascriptnpm install @podlove/podlove-web-player --save```Afterwards move the player assets to a public folder of some webserver. By default the player will try to load further chunks from the webserver base. If the player files are located in a subpath you have to adapt the `reference.base` accordingly (see [config]({{ 'config.html' | relative_url }}))",
         "url": "/installation.html",
 				"href": "podlove-web-player//installation.html"
       }
@@ -104,7 +104,7 @@
       "live-html": {
         "title": "Live",
         "category": "",
-        "content": "Live ModeConfig{  mode: 'live',  title: 'Livestream',  subtitle: 'Wir sind ein CreativeCommons-Webradio, das sich zur Aufgabe gemacht hat freie Musik zu verbreiten und die Hörer durch die vielen Beteiligungsmöglichkeiten direkt zu einem Teil unserer Sendungen zu machen.',  link: 'https://theradio.cc',  poster: 'https://theradio.cc/wp-content/uploads/2014/01/9e7d1d68285200b9d3c0-150x150.jpg',  show: {    title: 'TheRadio.cc',    link: 'https://theradio.cc'  },  audio: [{      url: 'http://mp3.theradio.cc/',      mimeType: 'audio/mp3'  }, {      url: 'http://ogg.theradio.cc/',      mimeType: 'audio/ogg'  }]}",
+        "content": "# Live Mode## Config```javascript{  mode: 'live',  title: 'Livestream',  subtitle: 'Wir sind ein CreativeCommons-Webradio, das sich zur Aufgabe gemacht hat freie Musik zu verbreiten und die Hörer durch die vielen Beteiligungsmöglichkeiten direkt zu einem Teil unserer Sendungen zu machen.',  link: 'https://theradio.cc',  poster: 'https://theradio.cc/wp-content/uploads/2014/01/9e7d1d68285200b9d3c0-150x150.jpg',  show: {    title: 'TheRadio.cc',    link: 'https://theradio.cc'  },  audio: [{      url: 'http://mp3.theradio.cc/',      mimeType: 'audio/mp3'  }, {      url: 'http://ogg.theradio.cc/',      mimeType: 'audio/ogg'  }]}```",
         "url": "/live.html",
 				"href": "podlove-web-player//live.html"
       }
@@ -113,7 +113,7 @@
       "persistence-html": {
         "title": "Player Persistence",
         "category": "",
-        "content": "PersistenceLocal StorageInformation like the current playtime is persisted in the browser local storage per episode.Episodes meta objects are hashed to create a episode specific hash code:{   \"pwp\": {      \"133677995\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": true        }      },      \"3804781328\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": false        }      },      \"-5005988967\": {        \"playtime\": 236.400308,        \"quantiles\": [          [            0.445033,            3.945098          ],          [            230.396353,            236.400308          ]        ]      }   }}UrlThe player configuration can be set via url parameters.This feature is used for deep linking, but can also be used to set custom meta information, like the title:  Custom Playtime: /podlove-web-player/persistence?t=01:33:07",
+        "content": "# Persistence## Local StorageInformation like the current playtime is persisted in the browser local storage per episode.Episodes meta objects are hashed to create a episode specific hash code:```javascript{   \"pwp\": {      \"133677995\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": true        }      },      \"3804781328\": {        \"tabs\": {          \"chapters\": false,          \"settings\": false,          \"share\": false        }      },      \"-5005988967\": {        \"playtime\": 236.400308,        \"quantiles\": [          [            0.445033,            3.945098          ],          [            230.396353,            236.400308          ]        ]      }   }}```## UrlThe player configuration can be set via url parameters.This feature is used for deep linking, but can also be used to set custom meta information, like the title:- Custom Playtime: [{{ \"persistence?t=01:33:07\" | relative_url }}]({{ \"persistence?t=01:33:07\" | relative_url }})",
         "url": "/persistence.html",
 				"href": "podlove-web-player//persistence.html"
       }
@@ -122,7 +122,7 @@
       "playground-html": {
         "title": "Playground",
         "category": "",
-        "content": "Playground",
+        "content": "# Playground",
         "url": "/playground.html",
 				"href": "podlove-web-player//playground.html"
       }
@@ -167,7 +167,7 @@
       "theme-html": {
         "title": "Theming",
         "category": "",
-        "content": "Theming  {    theme: {      main: \"#2B8AC6\"    }  }                        Main Color:                                        Highlight Color:                        Color CalculationThe player requires at least one main color. If not provided the default color will be used.Without setting a highlight color the essential control elements are colored black or white depending on a calculated WCGA contrast ratio.With a highlight color in place these control elements will be colored accordingly.",
+        "content": "# Theming  {    theme: {      main: \"#2B8AC6\"    }  }                        Main Color:                                        Highlight Color:                        ## Color CalculationThe player requires at least one main color. If not provided the default color will be used.Without setting a highlight color the essential control elements are colored black or white depending on a calculated [WCGA contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).With a highlight color in place these control elements will be colored accordingly.",
         "url": "/theme.html",
 				"href": "podlove-web-player//theme.html"
       }
@@ -176,7 +176,7 @@
       "transcripts-html": {
         "title": "Transcripts",
         "category": "",
-        "content": "TranscriptsHandcrafted TranscriptsMonotrack TranscriptsAutomatic Generated Transcripts",
+        "content": "# Transcripts## Handcrafted Transcripts## Monotrack Transcripts## Automatic Generated Transcripts",
         "url": "/transcripts.html",
 				"href": "podlove-web-player//transcripts.html"
       }
@@ -195,7 +195,7 @@
 </script>
 
 	<div class="sidebar-main">
-		<ul class="navigation" id="navigation">																									<li>				<a class="" href="/podlove-web-player/">					Overview				</a>			</li>								<li>				<a class="" href="/podlove-web-player/installation.html">					Installation				</a>			</li>								<li>				<a class="" href="/podlove-web-player/embedding.html">					Embedding				</a>			</li>								<li>				<a class="" href="/podlove-web-player/theme.html">					Theming				</a>			</li>								<li>				<a class="" href="/podlove-web-player/config.html">					Config				</a>			</li>								<li>				<a class="" href="/podlove-web-player/persistence.html">					Player Persistence				</a>			</li>								<li>				<a class="" href="/podlove-web-player/advanced.html">					Advanced Usage				</a>			</li>								<li>				<a class="" href="/podlove-web-player/extensions.html">					Extensions				</a>			</li>								<li>				<a class="" href="/podlove-web-player/live.html">					Live				</a>			</li>								<li>				<a class="" href="/podlove-web-player/playground.html">					Playground				</a>			</li>								<li>				<a class="active" href="/podlove-web-player/transcripts.html">					Transcripts				</a>			</li>								<li>				<a class="" href="/podlove-web-player/error.html">					Error Handling				</a>			</li>			</ul>
+		<ul class="navigation" id="navigation">																									<li>				<a class="" href="/podlove-web-player/">					Overview				</a>			</li>								<li>				<a class="" href="/podlove-web-player/installation.html">					Installation				</a>			</li>								<li>				<a class="" href="/podlove-web-player/embedding.html">					Embedding				</a>			</li>								<li>				<a class="" href="/podlove-web-player/theme.html">					Theming				</a>			</li>								<li>				<a class="" href="/podlove-web-player/config.html">					Config				</a>			</li>								<li>				<a class="" href="/podlove-web-player/persistence.html">					Player Persistence				</a>			</li>								<li>				<a class="" href="/podlove-web-player/advanced.html">					Advanced Usage				</a>			</li>								<li>				<a class="active" href="/podlove-web-player/extensions.html">					Extensions				</a>			</li>								<li>				<a class="" href="/podlove-web-player/live.html">					Live				</a>			</li>								<li>				<a class="" href="/podlove-web-player/playground.html">					Playground				</a>			</li>								<li>				<a class="" href="/podlove-web-player/transcripts.html">					Transcripts				</a>			</li>								<li>				<a class="" href="/podlove-web-player/error.html">					Error Handling				</a>			</li>			</ul>
 
 		<ul id="search-results" class="navigation"></ul>
 
@@ -204,24 +204,49 @@
 
 			<main class="content">
 				<div class="inner">
-					<script src="/podlove-web-player/embed.js"></script>
+					<h1 id="extensions">Extensions</h1>
 
-<h1 id="transcripts">Transcripts</h1>
+<h2 id="external-event-handling">External Event Handling</h2>
 
-<h2 id="handcrafted-transcripts">Handcrafted Transcripts</h2>
+<p>External event handling gives you the ability to control the player from other dom elements.</p>
 
-<p id="hand-crafted"></p>
-<script>podlovePlayer('#hand-crafted', 'fixtures/fg45.json');</script>
+<h3 id="installation">Installation</h3>
 
-<h2 id="monotrack-transcripts">Monotrack Transcripts</h2>
+<pre><code class="language-javascript">  &lt;script src="extensions/external-events.js"&gt;&lt;/script&gt;
+  &lt;div id="player-id"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    podlovePlayer('#player-id', 'path/to/config')
+      .then(registerExternalEvents('player-id'));
+  &lt;/script&gt;
+</code></pre>
 
-<p id="mono-track"></p>
-<script>podlovePlayer('#mono-track', 'fixtures/cs309.json');</script>
+<h3 id="usage">Usage</h3>
 
-<h2 id="automatic-generated-transcripts">Automatic Generated Transcripts</h2>
+<pre><code class="language-javascript">  &lt;a
+    href="javascript:void(0)"
+    rel="podlove-web-player" // Registeres event handler
+    data-ref="player-id"     // ID of player to control, if undefined all players without an ID are controlled
+    data-action="play|pause" // Action that is triggered on click (optional)
+    data-time="00:10:10.500" // Time in simple time format that is selected (optional)
+    data-tab="info|chapters|transcripts|share|download|audio" // Tab that is selected on interaction (optional)
+  &gt;External Element&lt;/a&gt;
+</code></pre>
+<h3 id="example">Example</h3>
 
-<p id="automatic"></p>
-<script>podlovePlayer('#automatic', 'fixtures/fs207.json');</script>
+<p><button class="button" rel="podlove-web-player" data-ref="example-player" data-action="play">play</button>
+<button class="button" rel="podlove-web-player" data-ref="example-player" data-action="pause">pause</button>
+<button class="button" rel="podlove-web-player" data-ref="example-player" data-time="00:10:00">set time</button>
+<button class="button" rel="podlove-web-player" data-ref="example-player" data-tab="download">activate download tab</button>
+<button class="button" rel="podlove-web-player" data-ref="example-player" data-action="play" data-time="00:10:00" data-tab="download">all combined</button></p>
+
+<p id="example-player" class="section"></p>
+<script src="/podlove-web-player/embed.js"></script>
+
+<script src="/podlove-web-player/extensions/external-events.js"></script>
+
+<script>
+    podlovePlayer('#example-player', './fixtures/example.json').then(registerExternalEvents('example-player'));
+</script>
 
 
 
