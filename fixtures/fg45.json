@@ -9,9 +9,7 @@
     "link": "https://forschergeist.de"
   },
   "reference": {
-    "share": "//podlove-player.surge.sh/share",
-    "config": "//podlove-player.surge.sh/fixtures/fg45.json",
-    "origin": "http://logbuch-netzpolitik.de/lnp220-street-clickability"
+    "config": "https:\/\/forschergeist.de\/?podlove_player4=154"
   },
   "theme": { "main": "#12584b" },
   "title": "FG045 Martin Luther",
@@ -81,7 +79,7 @@
       "name": "Lyndal Roper",
       "id": "lyndalroper",
       "avatar":
-        "https://forschergeist.de/wp-content/cache/podlove/88/47def9ad8458c83467f77f31d8b8bc/lyndal-roper_150x150.jpg",
+        "https:\/\/forschergeist.de\/podlove\/image\/68747470733a2f2f666f72736368657267656973742e64652f66696c65732f323031372f30352f6c796e64616c2d726f7065722e6a7067\/150\/150\/0\/lyndal-roper",
       "role": { "id": "2", "slug": "guest", "title": "Gast" },
       "group": { "id": "1", "slug": "onair", "title": "On Air" },
       "comment": null
